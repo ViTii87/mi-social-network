@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class NewsFeed here.
  * 
@@ -7,27 +7,45 @@
  */
 public class NewsFeed
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private ArrayList<MessagePost> messages;
+    private ArrayList<PhotoPost> photos;
 
     /**
      * Constructor for objects of class NewsFeed
      */
     public NewsFeed()
     {
-        // initialise instance variables
-        x = 0;
+        this.messages = new ArrayList<>();
+        this.photos = new ArrayList<>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Añade un mensaje
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void addMessagePost(MessagePost message){
+        messages.add(message);
+    }
+
+    /**
+     * Añade una foto
+     */
+    public void addPhotoPost(PhotoPost photo){
+        photos.add(photo);
+    }
+
+    /**
+     * Meotdo para mostrar todos los posts
+     */
+    public void show(){
+
+        for(MessagePost text : messages){
+            text.display();
+            System.out.println("");
+        }
+        System.out.println("");
+        for(PhotoPost photo : photos){
+            photo.display();
+            System.out.println("");
+        }
     }
 }
