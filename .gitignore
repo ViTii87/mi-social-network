@@ -1,4 +1,4 @@
-.*ctxt
-.*TXT
+*.ctxt
+*.TXT
 *.bluej
 *.class
